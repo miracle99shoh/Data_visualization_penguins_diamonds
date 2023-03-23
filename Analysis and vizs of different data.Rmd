@@ -1,0 +1,119 @@
+---
+title: "Ggplot aesthetics RMarkdown"
+author: "Miracle"
+date: "2023-03-05"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+we will upload necessary
+```{r}
+library(ggplot2)
+library(palmerpenguins)
+```
+we will start with simple graph
+ggplot(data = penguins)+ geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g))
+
+```{r}
+ggplot(data = penguins)+ geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g))
+```
+
+## to create a visual with scatterplots 
+ggplot(data = penguins)+
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g,alpha=species),color="red")
+```{r}
+ggplot(data = penguins)+
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g,alpha=species),color="red")
+```
+
+
+## creating a visual with smooth line
+ggplot(data = penguins)+ geom_smooth(mapping = aes(x=flipper_length_mm,y=body_mass_g),color="purple")
+
+```{r}
+ggplot(data = penguins)+ geom_smooth(mapping = aes(x=flipper_length_mm,y=body_mass_g),color="purple")
+
+```
+
+## creating two different visuals by combining them
+ggplot(data = penguins)+
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g,shape=species,color=species))+
+  geom_smooth(mapping = aes(x=flipper_length_mm,y=body_mass_g,linetype=species),color="purple")
+```{r}
+ggplot(data = penguins)+
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g,shape=species,color=species))+
+  geom_smooth(mapping = aes(x=flipper_length_mm,y=body_mass_g,linetype=species),color="purple")
+```
+
+
+## working with bar charts
+###it gives colors to only outlines
+ggplot(data = diamonds)+ geom_bar(mapping = aes(x=cut,color=cut)) 
+  
+```{r}
+ggplot(data = diamonds)+ geom_bar(mapping = aes(x=cut,color=cut)) 
+
+```
+
+### it fills the inside of bars with colors
+ggplot(data=diamonds)+ geom_bar(mapping=aes(x=color,fill=cut))  
+
+```{r}
+ggplot(data=diamonds)+ geom_bar(mapping=aes(x=color,fill=cut))  
+```
+we will add clarity to the bars
+ggplot(data=diamonds)+ geom_bar(mapping=aes(x=color,fill=clarity))
+
+```{r}
+ggplot(data=diamonds)+ geom_bar(mapping=aes(x=color,fill=clarity))
+```
+
+## creating separate plots for each species using FACET_WRAP funstion
+ggplot(data = penguins)+
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g,color=species))+
+  facet_wrap(~species)
+```{r}
+ggplot(data = penguins)+
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g,color=species))+
+  facet_wrap(~species)
+```
+
+ggplot(data=diamonds)+ geom_bar(mapping=aes(x=color,fill=cut))+ facet_wrap(~cut)
+```{r}
+ggplot(data=diamonds)+ geom_bar(mapping=aes(x=color,fill=cut))+ facet_wrap(~cut)
+
+```
+
+ggplot(data = penguins)+
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g,color=species))+
+  facet_grid(sex~species)
+```{r}
+ggplot(data = penguins)+
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g,color=species))+
+  facet_grid(sex~species)
+```
