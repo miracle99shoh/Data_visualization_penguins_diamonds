@@ -1,16 +1,14 @@
-<h1>JWipe - Disk Sanitization</h1>
-
- ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
+<h1>Analysis and Visualization of two different data in RStudio</h1>
 
 <h2>Description</h2>
-Project consists of a simple PowerShell script that walks the user through "zeroing out" (wiping) any drives that are connected to the system. The utility allows you to select the target disk and choose the number of passes that are performed. The PowerShell script will configure a diskpart script file based on the user's selections and then launch Diskpart to perform the disk sanitization.
+<br /> Project consists of a simple analysis of couple of public datasets: Diamonds and PalmerPenguins. Datasets are part of [ggplot2](https://ggplot2.tidyverse.org/reference/diamonds.html) package. 
 <br />
 
 
 <h2>Languages and Utilities Used</h2>
 
-- <b>PowerShell</b> 
-- <b>Diskpart</b>
+- <b>R </b> 
+- <b>R Studio</b>
 
 <h2>Environments Used </h2>
 
