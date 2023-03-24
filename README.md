@@ -1,9 +1,8 @@
-<h1>Analysis and Visualization of two different data in RStudio</h1>
+<h1>Data Visualization of two different data in RStudio</h1>
 
 <h2>Description</h2>
-<br /> Project consists of a simple analysis of couple of public datasets: Diamonds and PalmerPenguins. Datasets are part of [ggplot2](https://ggplot2.tidyverse.org/reference/diamonds.html) package. 
+<br /> Project consists of a simple analysis of couple of public datasets: Diamonds and PalmerPenguins. Datasets are part of the <br/><a href="https://ggplot2.tidyverse.org/reference/diamonds.html">ggplot2</a> package. 
 <br />
-
 
 <h2>Languages and Utilities Used</h2>
 
@@ -14,35 +13,48 @@
 
 - <b>Windows 10</b> (21H2)
 
-<h2>Program walk-through:</h2>
+<h2>Analysis and Visualization walk-through:</h2>
 
 <p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Start with the simplest scatterplot: <br/>
+<img src="https://github.com/miracle99shoh/portfolio/blob/main/diamonds_penguins%20data%20viz1.png"/>
 <br />
 <br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Adding the color of purple:  <br/>
+<img src="https://github.com/miracle99shoh/portfolio/blob/main/diamonds_penguins%20data%20viz2.png"/>
 <br />
 <br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Creating 'smooth' line: <br/>
+<img src="https://github.com/miracle99shoh/portfolio/blob/main/diamonds_penguins%20data%20viz3.png"/>
 <br />
 <br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Combining smooth line with scatterplot:  <br/>
+<img src="https://github.com/miracle99shoh/portfolio/blob/main/diamonds_penguins%20data%20viz4.png"/>
 <br />
 <br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Working with Barcharts (diamonds dataset):  <br/>
+<img src="https://github.com/miracle99shoh/portfolio/blob/main/diamonds_penguins%20data%20viz5.png"/>
 <br />
 <br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Filling the bars with colors:  <br/>
+<img src="https://github.com/miracle99shoh/portfolio/blob/main/diamonds_penguins%20data%20viz6.png"/>
 <br />
 <br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Adding clarity:  <br/>
+<img src="https://github.com/miracle99shoh/portfolio/blob/main/diamonds_penguins%20data%20viz7.png"/>
+<br />
+<br />
+Creating seperate plots with FACET_WRAP function (penguins by species):  <br/>
+<img src="https://github.com/miracle99shoh/portfolio/blob/main/diamonds_penguins%20data%20viz8.png"/>
+<br />
+<br />
+Creating seperate plots with FACET_WRAP function (diamonds):  <br/>
+<img src="https://github.com/miracle99shoh/portfolio/blob/main/diamonds_penguins%20data%20viz9.png"/>
+<br />
+
+<br />
+Creating seperate plots with FACET_WRAP function (penguins by species and sex):  <br/>
+<img src="https://github.com/miracle99shoh/portfolio/blob/main/diamonds_penguins%20data%20viz10.png"/>
 </p>
 
 <!--
